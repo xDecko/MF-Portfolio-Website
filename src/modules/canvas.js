@@ -1,3 +1,6 @@
+// Hero 3D canvas — draws the animated Salesforce cloud with orbiting satellites,
+// nucleus circles, surface nodes and field lines. Reacts to mouse movement
+// and fades out on scroll. Pauses when not visible to save performance.
 export default function initCanvas() {
   window.canvasPaused = false
 

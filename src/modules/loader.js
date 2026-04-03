@@ -1,3 +1,5 @@
+// Intro loading screen — hides the loader overlay after the page loads,
+// then signals the canvas to start rendering
 export default function initLoader() {
   window.loaderDone = false
   document.getElementById('canvas3d').style.opacity = '0'

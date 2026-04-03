@@ -1,6 +1,9 @@
+// Experience accordion — handles the "Me" section where each job (Salesforce, Kajabi, etc.)
+// can be expanded. Hover previews the detail panel, click locks it in place.
 export default function initAccordion() {
   var activeIndex = 0
 
+  // Switch the active accordion item and its matching detail panel
   function switchPanel(idx) {
     if (idx === activeIndex) return
     activeIndex = idx
@@ -19,6 +22,7 @@ export default function initAccordion() {
     })
   }
 
+  // Hover shows a preview, mouseleave reverts after a short delay, click commits the selection
   var hoverTimer
   document.querySelectorAll('.acc-item').forEach(function(item, i) {
     item.addEventListener('mouseenter', function() {

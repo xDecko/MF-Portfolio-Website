@@ -1,3 +1,4 @@
+// Entry point — imports styles and initializes all site modules
 import './style.css'
 import initLoader from './modules/loader.js'
 import initCursor from './modules/cursor.js'
