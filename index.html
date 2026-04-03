@@ -1,13 +1,346 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mf-portfolio-website</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDk0NiA5NDYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyOyI+CiAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLC02NjMyLjQ2ODQzNSwtOS44NTgyMjcpIj4KICAgICAgICA8ZyBpZD0iQXJ0Ym9hcmQzIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjgwMDQ1MSwwLDAsMC44MDA0NTEsMTg1OC45NzAwNDQsOS44NTgyMjcpIj4KICAgICAgICAgICAgPHJlY3QgeD0iNTk2My41MSIgeT0iMCIgd2lkdGg9IjExODEuMTAyIiBoZWlnaHQ9IjExODEuMTAyIiBzdHlsZT0iZmlsbDpub25lOyIvPgogICAgICAgICAgICA8Y2xpcFBhdGggaWQ9Il9jbGlwMSI+CiAgICAgICAgICAgICAgICA8cmVjdCB4PSI1OTYzLjUxIiB5PSIwIiB3aWR0aD0iMTE4MS4xMDIiIGhlaWdodD0iMTE4MS4xMDIiLz4KICAgICAgICAgICAgPC9jbGlwUGF0aD4KICAgICAgICAgICAgPGcgY2xpcC1wYXRoPSJ1cmwoI19jbGlwMSkiPgogICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNDkyOTYsMCwwLDEuMjQ5Mjk2LC0yMzIyLjQwMzA3OSwtMTIuMzE1ODM5KSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTc0NzAuODc4LDkuODU4Qzc0OTkuMjU3LDkuODU4IDc1MjYuNDc1LDIxLjEzMiA3NTQ2LjU0Miw0MS4xOTlDNzU2Ni42MDksNjEuMjY3IDc1NzcuODgzLDg4LjQ4NCA3NTc3Ljg4MywxMTYuODYzTDc1NzcuODgzLDg0OC4yNjhDNzU3Ny44ODMsODc2LjY0NyA3NTY2LjYwOSw5MDMuODY0IDc1NDYuNTQyLDkyMy45MzJDNzUyNi40NzUsOTQzLjk5OSA3NDk5LjI1Nyw5NTUuMjczIDc0NzAuODc4LDk1NS4yNzNMNjczOS40NzQsOTU1LjI3M0M2NzExLjA5NCw5NTUuMjczIDY2ODMuODc3LDk0My45OTkgNjY2My44MSw5MjMuOTMyQzY2NDMuNzQyLDkwMy44NjQgNjYzMi40NjgsODc2LjY0NyA2NjMyLjQ2OCw4NDguMjY4TDY2MzIuNDY4LDExNi44NjNDNjYzMi40NjgsODguNDg0IDY2NDMuNzQyLDYxLjI2NyA2NjYzLjgxLDQxLjE5OUM2NjgzLjg3NywyMS4xMzIgNjcxMS4wOTQsOS44NTggNjczOS40NzQsOS44NThMNzQ3MC44NzgsOS44NThaIiBzdHlsZT0iZmlsbDpyZ2IoMSwxMTgsMjExKTsiLz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuOTY0MDQ2LDAsMCwwLjk2NDA0NiwyNTMuMjQzODM0LC01NS43Mzg1MTcpIj4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxNy4wNDEyNzMsMCwwLDE3LjA0MTI3MywtOTM5Mi43MzY3MDksLTMxMDM3Ljc3NjYwOCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOTAzLjU2NywxODc3LjIyNUw5MDMuNTY3LDE4NDIuMjI1TDkxNS44MTcsMTg0Mi4yMjVMOTIxLjg2NywxODcyLjcyNUw5MjIuNzY3LDE4NzIuNzI1TDkyOC44MTcsMTg0Mi4yMjVMOTQxLjA2NywxODQyLjIyNUw5NDEuMDY3LDE4NzcuMjI1TDkzNC42NjcsMTg3Ny4yMjVMOTM0LjY2NywxODQ3LjA3NUw5MzMuNzY3LDE4NDcuMDc1TDkyNy43NjcsMTg3Ny4yMjVMOTE2Ljg2NywxODc3LjIyNUw5MTAuODY3LDE4NDcuMDc1TDkwOS45NjcsMTg0Ny4wNzVMOTA5Ljk2NywxODc3LjIyNUw5MDMuNTY3LDE4NzcuMjI1WiIgc3R5bGU9ImZpbGw6d2hpdGU7Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDE3LjA0MTI3MywwLDAsMTcuMDQxMjczLC05NDU3LjkzNTYyNCwtMzEwMzcuNzc2NjA4KSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik05NDcuNjY3LDE4NzcuMjI1TDk0Ny42NjcsMTg0Mi4yMjVMOTY5LjY2NywxODQyLjIyNUw5NjkuNjY3LDE4NDguMjI1TDk1NC4yNjcsMTg0OC4yMjVMOTU0LjI2NywxODU2LjY3NUw5NjguNDY3LDE4NTYuNjc1TDk2OC40NjcsMTg2Mi42NzVMOTU0LjI2NywxODYyLjY3NUw5NTQuMjY3LDE4NzcuMjI1TDk0Ny42NjcsMTg3Ny4yMjVaIiBzdHlsZT0iZmlsbDp3aGl0ZTsiLz4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="/>
+  <title>Manuel Fernández · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="cur-dot" id="cDot"></div>
+<div class="cur-ring" id="cRing"></div>
+<div class="cur-text" id="cText">
+  <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <path id="circlePath" d="M 45,45 m -32,0 a 32,32 0 1,1 64,0 a 32,32 0 1,1 -64,0"/>
+    </defs>
+    <text>
+      <textPath href="#circlePath">VIEW · EXPLORE · OPEN ·</textPath>
+    </text>
+  </svg>
+</div>
+
+<div class="loader" id="loader">
+  <div class="loader-name">
+    <span style="animation-delay:0.0s">M</span><span style="animation-delay:0.05s">A</span><span style="animation-delay:0.10s">N</span><span style="animation-delay:0.15s">U</span><span style="animation-delay:0.20s">E</span><span style="animation-delay:0.25s">L</span><span style="animation-delay:0.30s">&nbsp;</span><span style="animation-delay:0.35s">F</span><span style="animation-delay:0.40s">E</span><span style="animation-delay:0.45s">R</span><span style="animation-delay:0.50s">N</span><span style="animation-delay:0.55s">Á</span><span style="animation-delay:0.60s">N</span><span style="animation-delay:0.65s">D</span><span style="animation-delay:0.70s">E</span><span style="animation-delay:0.75s">Z</span>
+  </div>
+</div>
+
+<nav>
+  <div class="logo">MF</div>
+</nav>
+
+<div class="hero-badges">
+  <!-- Badge 1 - App Builder -->
+  <div class="hero-badge hero-badge-cert hero-badge-cert-alt">
+    <div title="App Builder">
+      <img src="https://i.ibb.co/fdqrwy40/servlet.png" alt="App Builder"/>
+    </div>
+  </div>
+  <!-- Badge 2 - Platform Foundations -->
+  <div class="hero-badge hero-badge-cert">
+    <div title="Platform Foundations">
+      <img src="https://i.ibb.co/NnVz8cwP/servlet-1.png" alt="Platform Foundations"/>
+    </div>
+  </div>
+  <!-- Badge 3 - Ranger -->
+  <div class="hero-badge hero-badge-cert hero-badge-cert-ranger">
+    <div title="Ranger">
+      <img src="https://i.ibb.co/GQfS1YQw/ranger.png" alt="Ranger"/>
+    </div>
+  </div>
+  <!-- Badge 4 - Agentblazer -->
+  <div class="hero-badge hero-badge-cert hero-badge-cert-agentblazer">
+    <div title="Agentblazer">
+      <img src="https://i.ibb.co/0VcWrR6H/agentblazer-level-1-a564a869686f7b888fabd8c82dafaf25928fa006be2388ab57e6f232876c2bf0.png" alt="Agentblazer"/>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-avail">
+      <span class="hero-avail-dot"></span>
+      Open to Work
+    </div>
+    <h1 class="hero-name">
+      <span class="line"><span>Manuel</span></span>
+      <span class="line"><span><span class="accent">Fernández</span><span style="font-weight:200;opacity:0.45;">.</span></span></span>
+    </h1>
+    <div class="hero-role">Multimedia Engineer &amp; CRM Specialist</div>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">Multimedia Engineer with a passion for building smart digital solutions — from custom web development and UX/UI design to CRM platforms, automations and integrations. Based in Cali, Colombia, working globally.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-num">20+</span>
+        <span class="hero-meta-lbl">Courses</span>
+      </div>
+      <div class="hero-meta-sep"></div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-num">2 SF</span>
+        <span class="hero-meta-lbl">Certifications</span>
+      </div>
+      <div class="hero-meta-sep"></div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-num">101</span>
+        <span class="hero-meta-lbl">Badges</span>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#work">Projects</a>
+      <a class="hero-cta-secondary" href="#contact">Let's talk</a>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-bar"></div>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <canvas id="canvas3d"></canvas>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-inner">
+    <span>Salesforce</span><span>Web Dev</span><span>UX/UI</span><span>CRM</span><span>Automations</span><span>Integrations</span><span>Kajabi</span><span>HubSpot</span><span>Salesforce</span><span>Web Dev</span><span>UX/UI</span><span>CRM</span><span>Automations</span><span>Integrations</span><span>Kajabi</span><span>HubSpot</span>
+  </div>
+  <div class="marquee-inner" aria-hidden="true">
+    <span>Salesforce</span><span>Web Dev</span><span>UX/UI</span><span>CRM</span><span>Automations</span><span>Integrations</span><span>Kajabi</span><span>HubSpot</span><span>Salesforce</span><span>Web Dev</span><span>UX/UI</span><span>CRM</span><span>Automations</span><span>Integrations</span><span>Kajabi</span><span>HubSpot</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="sec-label rv">01 — Me</div>
+
+  <div class="me-intro rv">
+    <div class="me-heading">
+      Building digital<br>experiences where<br><em>technology</em> meets<br>strategy.
+    </div>
+    <div class="me-intro-right">
+      <p class="me-intro-text">I bridge the gap between design and engineering — crafting web solutions, configuring CRM ecosystems and automating workflows that actually work. From Salesforce implementations to custom-coded platforms, I turn complex requirements into clean, functional experiences.</p>
+      <div class="me-lang-label">Languages</div>
+      <div class="me-lang-row">
+        <div class="me-lang-item" data-l="native">
+          <span class="me-lang-item-name">Spanish</span>
+          <span class="me-lang-item-level">Native</span>
+          <span class="me-lang-item-bar"></span>
+        </div>
+        <div class="me-lang-item" data-l="professional">
+          <span class="me-lang-item-name">English</span>
+          <span class="me-lang-item-level">Professional</span>
+          <span class="me-lang-item-bar"></span>
+        </div>
+        <div class="me-lang-item" data-l="reading">
+          <span class="me-lang-item-name">Portuguese</span>
+          <span class="me-lang-item-level">Reading</span>
+          <span class="me-lang-item-bar"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="me-body">
+    <!-- LEFT: accordion -->
+    <div class="me-accordion" id="meAccordion">
+      <div class="acc-item active" data-index="0">
+        <div class="acc-header">
+          <div class="acc-header-left">
+            <span class="acc-index">01</span>
+            <span class="acc-company">Salesforce</span>
+            <span class="acc-role">CRM · Platform App Builder</span>
+          </div>
+          <div class="acc-right">
+            <span class="acc-period">2026 — Present</span>
+            <span class="acc-arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item" data-index="1">
+        <div class="acc-header">
+          <div class="acc-header-left">
+            <span class="acc-index">02</span>
+            <span class="acc-company">Kajabi</span>
+            <span class="acc-role">CRM · CMS · Platform Implementation</span>
+          </div>
+          <div class="acc-right">
+            <span class="acc-period">2023 — 2025</span>
+            <span class="acc-arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item" data-index="2">
+        <div class="acc-header">
+          <div class="acc-header-left">
+            <span class="acc-index">03</span>
+            <span class="acc-company">Nueva EPS</span>
+            <span class="acc-role">Web Development · Front-End</span>
+          </div>
+          <div class="acc-right">
+            <span class="acc-period">2022 — 2023</span>
+            <span class="acc-arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item" data-index="3">
+        <div class="acc-header">
+          <div class="acc-header-left">
+            <span class="acc-index">04</span>
+            <span class="acc-company">HospFriends</span>
+            <span class="acc-role">Mobile Development · UX/UI · Research</span>
+          </div>
+          <div class="acc-right">
+            <span class="acc-period">2021</span>
+            <span class="acc-arrow"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: detail panels -->
+    <div class="me-detail rv">
+      <div class="me-detail-wrap" id="meDetailWrap">
+
+        <!-- 01 · Salesforce -->
+        <div class="me-detail-panel active" data-panel="0">
+          <div class="me-detail-eyebrow">Salesforce · 2026 — Present</div>
+          <p class="me-detail-desc">I built my CRM foundation by understanding both the business side and the systems behind it. Working with clients, pipelines, automations, and customer journeys across platforms led me to Salesforce, where I'm now focused on growing toward a Salesforce Developer path.</p>
+          <div class="me-detail-kicker">Stack</div>
+          <div class="me-detail-stack">
+            <span class="stack-tag">Salesforce</span><span class="stack-tag">CRM</span><span class="stack-tag">Admin</span><span class="stack-tag">App Builder</span><span class="stack-tag">Data Modeling</span><span class="stack-tag">Flows</span><span class="stack-tag">Apex</span><span class="stack-tag">Agentforce</span><span class="stack-tag">SOQL</span>
+          </div>
+          <div class="me-detail-line"></div>
+          <div class="me-detail-kicker">Key achievements</div>
+          <div class="me-detail-achievements">
+            <div class="achievement"><span class="ach-num">01</span>Salesforce Certified Platform App Builder</div>
+            <div class="achievement"><span class="ach-num">02</span>Salesforce Certified Platform Foundations</div>
+            <div class="achievement"><span class="ach-num">03</span>101 Trailhead badges across Admin, Developer, and AI</div>
+            <div class="achievement"><span class="ach-num">04</span>Agentblazer Level 1 in Agentforce AI</div>
+          </div>
+        </div>
+
+        <!-- 02 · Kajabi -->
+        <div class="me-detail-panel" data-panel="1">
+          <div class="me-detail-eyebrow">Kajabi · 2023 — 2025</div>
+          <p class="me-detail-desc">Kajabi helped me understand how CRM, content, automations, and customer journeys work together as one connected system. From funnels and offers to integrations and lifecycle processes, I focused on building setups that felt clear, reliable, and aligned with each business model.</p>
+          <div class="me-detail-kicker">Stack</div>
+          <div class="me-detail-stack">
+            <span class="stack-tag">Kajabi</span><span class="stack-tag">CRM</span><span class="stack-tag">CMS</span><span class="stack-tag">Custom Code</span><span class="stack-tag">Funnels</span><span class="stack-tag">Email Marketing</span><span class="stack-tag">Automations</span><span class="stack-tag">Webhooks</span><span class="stack-tag">Public API</span><span class="stack-tag">Integrations</span><span class="stack-tag">DNS</span><span class="stack-tag">Lead Capture</span>
+          </div>
+          <div class="me-detail-line"></div>
+          <div class="me-detail-kicker">Key achievements</div>
+          <div class="me-detail-achievements">
+            <div class="achievement"><span class="ach-num">01</span>Built funnels, landing pages, forms, pipelines, and email sequences</div>
+            <div class="achievement"><span class="ach-num">02</span>Configured tags, triggers, segmentation, webhooks, and automations</div>
+            <div class="achievement"><span class="ach-num">03</span>Extended platform functionality through integrations, API workflows, and custom code</div>
+            <div class="achievement"><span class="ach-num">04</span>Collaborated with international teams across different countries</div>
+          </div>
+        </div>
+
+        <!-- 03 · Nueva EPS -->
+        <div class="me-detail-panel" data-panel="2">
+          <div class="me-detail-eyebrow">Nueva EPS · 2022 — 2023</div>
+          <p class="me-detail-desc">At Nueva EPS, I strengthened my front-end foundation by working on content structure, interface updates, and multisite maintenance. It gave me a solid understanding of how layout, navigation, and information architecture support stable and easy-to-use digital experiences.</p>
+          <div class="me-detail-kicker">Stack</div>
+          <div class="me-detail-stack">
+            <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">Responsive Design</span><span class="stack-tag">Multisite Management</span><span class="stack-tag">Website Maintenance</span><span class="stack-tag">Content Workflows</span><span class="stack-tag">Information Architecture</span><span class="stack-tag">UX/UI</span>
+          </div>
+          <div class="me-detail-line"></div>
+          <div class="me-detail-kicker">Key achievements</div>
+          <div class="me-detail-achievements">
+            <div class="achievement"><span class="ach-num">01</span>Managed front-end and content updates across multiple websites</div>
+            <div class="achievement"><span class="ach-num">02</span>Maintained responsive layouts and cross-site visual consistency</div>
+            <div class="achievement"><span class="ach-num">03</span>Improved page structure, navigation, and content clarity</div>
+            <div class="achievement"><span class="ach-num">04</span>Supported high-demand digital platforms for healthcare information</div>
+          </div>
+        </div>
+
+        <!-- 04 · HospFriends -->
+        <div class="me-detail-panel" data-panel="3">
+          <div class="me-detail-eyebrow">HospFriends · 2021</div>
+          <p class="me-detail-desc">HospFriends was a meaningful project where design, research, and empathy came together. Contributing to a mobile and web proposal for hospitalized children taught me to create digital experiences that feel not only functional, but also supportive and human.</p>
+          <div class="me-detail-kicker">Stack</div>
+          <div class="me-detail-stack">
+            <span class="stack-tag">Mobile UX/UI</span><span class="stack-tag">Mobile-First Design</span><span class="stack-tag">App Design</span><span class="stack-tag">User Research</span><span class="stack-tag">Prototyping</span><span class="stack-tag">Interaction Design</span><span class="stack-tag">Front End</span><span class="stack-tag">Web Design</span>
+          </div>
+          <div class="me-detail-line"></div>
+          <div class="me-detail-kicker">Key achievements</div>
+          <div class="me-detail-achievements">
+            <div class="achievement"><span class="ach-num">01</span>Designed mobile-first flows for hospital-based interaction needs</div>
+            <div class="achievement"><span class="ach-num">02</span>Created interface proposals focused on usability, accessibility, and clear navigation</div>
+            <div class="achievement"><span class="ach-num">03</span>Built prototypes and interaction structures for a child-centered experience</div>
+            <div class="achievement"><span class="ach-num">04</span>Defined screen behavior, content hierarchy, and interaction logic</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="sec-label rv">02 — Projects</div>
+  <div class="work-grid">
+    <a href="https://github.com/xDecko/SF-ServiceDesk-Hub" target="_blank" class="work-card rv work-card-photo" style="background-image:url('https://lh3.googleusercontent.com/pw/AP1GczMut4Nw37EutpXm88q5StQqudoj6pbfN_oYjtdXzZthVcGuB_gNtUy3uRXE4R6Mxtm9oyhep6g1UTvwcKCrY2-80IFlRNLcgH4qtT7KVMr_McGJUNRz2t08IEWrQn14_wUbtY08RVX0I_AeAExWrpAT=w1600-h1200-s-no-gm?authuser=0');background-size:cover;background-position:center;">
+      <div class="work-card-inner"><div class="work-num">01</div><div class="work-name">SF ServiceDesk Hub</div><div class="work-cat">Data Model · Apex Triggers · LWC</div></div>
+      <div class="work-arr">↗</div>
+    </a>
+    <a href="https://github.com/xDecko/Market-API" target="_blank" class="work-card rv work-card-photo" style="background-image:url('https://lh3.googleusercontent.com/pw/AP1GczMytq99iZ_a_sGJpY7DYNAOag14sYReKfegmy_zG88ms9Fu3pTeRp7G2ybFkouq-FMuqj4mOu-X_E3kW9qJgqcUSrQYm0O0PDE-DkWoaXFLvG3XtwdQvNlGDCILy1-ReCUS9uWjyu4-_MpqR-NYsvEl=w1600-h1200-s-no-gm?authuser=0');background-size:cover;background-position:center;">
+      <div class="work-card-inner"><div class="work-num">02</div><div class="work-name">Market API</div><div class="work-cat">Backend - Spring Boot</div></div>
+      <div class="work-arr">↗</div>
+    </a>
+    <a href="https://be.net/decko-" target="_blank" class="work-card rv work-card-photo" style="background-image:url('https://lh3.googleusercontent.com/pw/AP1GczN4EZm6dlJJy-_9PnoucwwEaZQ0YNDGY55cKM6RZdOionpN6RGrqGWLgLbibCSHIhVzMp7evgX1SWXS6FQan58UgVvWxvetnx62OHV3_gAsDWSSRSnjRBOyz_d2iq3AEjE2SWhhSXnehOY9ubge7hXU=w1600-h1200-s-no-gm?authuser=0');background-size:cover;background-position:center;">
+      <div class="work-card-inner"><div class="work-num">03</div><div class="work-name">HosptFriends</div><div class="work-cat">Mobile App · UX/UI Design</div></div>
+      <div class="work-arr">↗</div>
+    </a>
+    <div class="work-card rv">
+      <svg class="shape-bg" width="200" height="200" viewBox="0 0 200 200"><ellipse cx="100" cy="100" rx="90" ry="50" fill="none" stroke="#0176D3" stroke-width="0.5"/><ellipse cx="100" cy="100" rx="50" ry="90" fill="none" stroke="#0176D3" stroke-width="0.5"/></svg>
+      <div class="work-card-inner"><div class="work-num">04</div><div class="work-name">SF Trailhead</div><div class="work-cat">96 Badges · Certifications</div></div>
+      <div class="work-arr">↗</div>
+    </div>
+    <div class="work-card rv">
+      <svg class="shape-bg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" fill="none" stroke="#0176D3" stroke-width="0.5"/><circle cx="100" cy="100" r="45" fill="none" stroke="#0176D3" stroke-width="0.5"/></svg>
+      <div class="work-card-inner"><div class="work-num">05</div><div class="work-name">CRM Automations</div><div class="work-cat">Flows · Integrations · Webhooks</div></div>
+      <div class="work-arr">↗</div>
+    </div>
+    <div class="work-card rv">
+      <svg class="shape-bg" width="200" height="200" viewBox="0 0 200 200"><rect x="30" y="30" width="140" height="140" rx="8" fill="none" stroke="#0176D3" stroke-width="0.5"/><rect x="55" y="55" width="90" height="90" rx="4" fill="none" stroke="#0176D3" stroke-width="0.5"/></svg>
+      <div class="work-card-inner"><div class="work-num">06</div><div class="work-name">Web Platforms</div><div class="work-cat">Custom Code · Landing Pages</div></div>
+      <div class="work-arr">↗</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="sec-label rv" style="justify-content:center;">03 — Contact</div>
+  <h2 class="contact-title rv">Let's build<br>something <span class="accent">remarkable</span>.</h2>
+  <a href="mailto:manuf_24@hotmail.com" class="contact-mail rv">Send me a message →</a>
+</section>
+
+<footer>
+  <div class="footer-watermark">Manuel Fernández</div>
+  <div class="footer-inner">
+    <div class="footer-tagline">Design meets <em>engineering.</em></div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/manuel-fern%C3%A1ndez-b24448270/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/xDecko" target="_blank">GitHub</a>
+      <a href="https://www.salesforce.com/trailblazer/decko" target="_blank">Trailhead</a>
+      <a href="https://www.behance.net/decko-" target="_blank">Behance</a>
+      <a href="https://x.com/deckoCo" target="_blank">X</a>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Manuel Fernández · Cali, Colombia</span>
+      <span class="footer-avail">
+        <span class="footer-avail-dot"></span>
+        Open to work
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
 </html>
