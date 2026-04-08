@@ -302,15 +302,7 @@ nav > * { pointer-events: auto; }
   padding-left: 60px;
   position: relative;
 }
-.me-intro-right::before {
-  content: '';
-  position: absolute;
-  left: -3.5px; top: 8px;
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: rgba(1,118,211,0.3);
-  box-shadow: 0 0 0 4px rgba(1,118,211,0.06);
-}
+.me-intro-right::before { display: none; }
 
 .me-intro-text {
   font-size: 0.93rem;
