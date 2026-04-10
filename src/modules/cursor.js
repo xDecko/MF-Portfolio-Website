@@ -38,7 +38,7 @@ export default function initCursor() {
 
   // Show rotating text cursor on interactive elements (except badges, CTAs, footer, accordion)
   document.querySelectorAll('a,.work-card,.svc-row').forEach(function(el){
-    if(el.closest('.hero-badge-cert') || el.closest('.hero-cta') || el.classList.contains('hero-cta-secondary') || el.closest('.footer-social') || el.closest('.acc-item')) return
+    if(el.closest('.hero-badge-cert') || el.closest('.hero-badges') || el.closest('.hero-cta') || el.classList.contains('hero-cta-secondary') || el.closest('.footer-social') || el.closest('.acc-item')) return
     el.addEventListener('mouseenter', function(){
       cRing.classList.add('hover')
       cText.classList.add('hover')
