@@ -256,6 +256,7 @@ nav > * { pointer-events: auto; }
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 .me-social-link:hover { transform: scale(1.25) translateZ(0); }
+.me-social-link--center { left: 71px; top: 71px; }
 .me-social-link--gh { left: 71px; top: -24px; }
 .me-social-link--be { left: 153px; top: 119px; }
 .me-social-link--li { left: -11px; top: 119px; }
